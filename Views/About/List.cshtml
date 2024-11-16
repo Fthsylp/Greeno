@@ -1,0 +1,56 @@
+﻿@model List<Greeno.Models.Domain.About>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Show All Abouts - Admin Functionality</h1>
+    </div>
+</div>
+
+
+
+<div class="container py-5">
+    @if (Model.Count != 0)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Satisfaction</th>
+                    <th>FreeDelivery</th>
+                    <th>StoreLocators</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Title</td>
+                        <td>@item.Description</td>
+                        <td>@item.Satisfaction</td>
+                        <td>@item.FreeDelivery</td>
+                        <td>@item.StoreLocators</td>
+                        <td>
+                            <a asp-area="" asp-controller="About" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <form asp-area="" asp-controller="About" asp-action="Delete" method="post" style="display:inline;">
+                                <input type="hidden" name="Id" value="@item.Id" />
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div>
+            <a asp-area="" asp-controller="About" asp-action="Add">New About</a>
+        </div>
+    }
+</div>

@@ -1,0 +1,61 @@
+﻿@model Greeno.Models.Domain.About
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Show All Abouts - Admin Functionality</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+
+    @if (Model == null)
+    {
+        <p>Tag not found!</p>
+    }
+
+    else
+    {
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label class="form-label">Id</label>
+                <input type="text" id="id" class="form-control" asp-for="Id" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" asp-for="Title" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Sub Title</label>
+                <input type="text" class="form-control" asp-for="Description" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Satisfaction</label>
+                <input type="text" class="form-control" asp-for="Satisfaction" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">FreeDelivery</label>
+                <input type="text" class="form-control" asp-for="FreeDelivery" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">StoreLocators</label>
+                <input type="text" class="form-control" asp-for="StoreLocators" />
+            </div>
+
+            <div class="mb-3">
+                <button class="submit" type="submit">Update</button>
+            </div>
+        </form>
+    }
+</div>

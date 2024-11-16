@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - YourAppName</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-DNXjNoXVpPCKx4lLgQXp7sm3moXB6ufxI2H9/fNJgXlY6aE3fQ5C6g1sFSdzvqmG"
+          crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Admin Dashboard</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome to the Admin Dashboard</h1>
+        <p class="text-center">Manage your application's content from here.</p>
+
+        <div class="row mt-4">
+            <!-- Carousel Management -->
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-images" style="font-size: 4rem;"></i>
+                        <h5 class="card-title mt-3">Carousel</h5>
+                        <p class="card-text">Manage carousel images and content.</p>
+                        <a href="@Url.Action("List", "Carousel")" class="btn btn-primary btn-block">Manage Carousel</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Management -->
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-envelope" style="font-size: 4rem;"></i>
+                        <h5 class="card-title mt-3">Contact</h5>
+                        <p class="card-text">View and respond to contact messages.</p>
+                        <a href="@Url.Action("List", "Contact")" class="btn btn-primary btn-block">Manage Contacts</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Management -->
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-card-image" style="font-size: 4rem;"></i>
+                        <h5 class="card-title mt-3">Gallery</h5>
+                        <p class="card-text">Manage gallery images.</p>
+                        <a href="@Url.Action("List", "Gallery")" class="btn btn-primary btn-block">Manage Gallery</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plant Management -->
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-tree" style="font-size: 4rem;"></i>
+                        <h5 class="card-title mt-3">Plants</h5>
+                        <p class="card-text">Manage plant information.</p>
+                        <a href="@Url.Action("List", "Plant")" class="btn btn-primary btn-block">Manage Plants</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXd59E1XyO0iZpSCNzC+nsPQ1XQpt0SPG2Y6Kz1vfIbZgGnYl9sVZU7rTk9IlGG"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k0tEBbBb4QgVJ71GRXwAh8EeCVnHsZDnZxYgq4qqEZDoY7GqXvv+giUOn4LJGAOH"
+            crossorigin="anonymous"></script>
+</body>
+</html>

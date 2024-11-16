@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Greeno.Models.Domain.Gallery>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="titlepage">
+                <h2>Our Gallery </h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid margin-r-l">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 thumb">
+                <div class="Gallery-box">
+                    <figure>
+                        <a href="images/1.jpg" class="fancybox" rel="ligthbox">
+                            <img src="@item.Image" class="zoom img-fluid " alt="">
+                        </a>
+                        a
+                        <span class="hoverle">
+                            <a href="@item.Image" class="fancybox" rel="ligthbox">View</a>
+                        </span>
+                    </figure>
+                </div>
+            </div>
+        }
+    </div>
+</div>

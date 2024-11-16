@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@await Component.InvokeAsync("Carousel")
+<!-- plant -->
+@await Component.InvokeAsync("Plant")
+<!-- end plant -->
+<!-- about -->
+@await Component.InvokeAsync("About")
+<!-- end about -->
+<!--Gallery -->
+<div id="gallery" class="Gallery">
+    @await Component.InvokeAsync("Gallery")
+    <!-- end Gallery -->
+    <!--contact -->
+    @await Component.InvokeAsync("Contact")
+    <!-- end contact -->

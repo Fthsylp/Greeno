@@ -1,0 +1,45 @@
+﻿@model Greeno.Models.Domain.About
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Add New About - Admin Functionality</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" asp-for="Title" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <input type="text" class="form-control" id="displayName" asp-for="Description" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Satisfaction</label>
+            <input type="text" class="form-control" id="displayName" asp-for="Satisfaction" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">FreeDelivery</label>
+            <input type="text" class="form-control" id="displayName" asp-for="FreeDelivery" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">StoreLocators</label>
+            <input type="text" class="form-control" id="displayName" asp-for="StoreLocators" />
+        </div>
+        
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+</div>
